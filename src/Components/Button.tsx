@@ -1,6 +1,13 @@
 import React from 'react';
-import { Text, TouchableOpacity, TouchableOpacityProps, StyleSheet } from 'react-native';
+import { 
+  Text,
+  TouchableOpacity,
+  TouchableOpacityProps,
+  StyleSheet
+} from 'react-native';
+
 import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 
 type ButtonProps = TouchableOpacityProps & {
   title: string;
@@ -23,16 +30,15 @@ export function Button({ title, ...rest }: ButtonProps) {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.green,
+    height: 56,
+    borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 16,
-    marginBottom: 10,
-    paddingHorizontal: 10,
-    height: 56,
-    minWidth: 56,
+    paddingHorizontal: 20,
   },
   buttonText: {
+    fontSize: 16,
     color: colors.white,
-    fontSize: 24,
+    fontFamily: fonts.heading,
   }
 })
